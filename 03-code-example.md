@@ -5,6 +5,8 @@
 ```{code-block} python
 :name: my-program
 :caption: Creating a TensorMesh using SimPEG
+:linenos:
+:emphasize-lines: 3,4
 from discretize import TensorMesh
 
 hx = [(1, 40)]

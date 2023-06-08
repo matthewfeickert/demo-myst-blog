@@ -12,9 +12,9 @@ site:
   # title:
   # logo:
   # The following lines need to be commented out for GitHub pages
-  projects:
-    - slug: myst
-      path: .
+  # projects:
+  #   - slug: myst
+  #     path: .
   nav: []
   actions:
     - title: Learn More

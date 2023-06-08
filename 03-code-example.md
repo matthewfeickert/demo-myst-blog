@@ -28,3 +28,18 @@ If $\hat P$ is the fixed point of the map $\mathcal B \circ \mathcal D$ and $\ha
 K(\hat F, \theta) = (\theta I - C'\hat P C)^{-1} C' \hat P  (A - B \hat F)
 ```
 ````
+
+## Mermaid diagram
+
+```{mermaid}
+flowchart LR
+  A[Jupyter Notebook] --> C
+  B[MyST Markdown] --> C
+  C(mystjs) --> D{AST}
+  D <--> E[LaTeX]
+  E --> F[PDF]
+  D --> G[Word]
+  D --> H[React]
+  D --> I[HTML]
+  D <--> J[JATS]
+```

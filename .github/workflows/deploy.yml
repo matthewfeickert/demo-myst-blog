@@ -8,6 +8,10 @@ on:
 env:
   BASE_URL: /${{ github.event.repository.name }}
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,6 +28,14 @@ jobs:
 
       - name: Build HTML Assets
         run: myst build --html
+
+      - name: list files
+        run: ls -l _build/html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+            path: '_build/html'
 
   deploy:
     name: Deploy website to GitHub Pages
